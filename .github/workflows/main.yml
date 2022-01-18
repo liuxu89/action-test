@@ -53,7 +53,7 @@ jobs:
           to: ${{secrets.TOADDRESS}}
           subject: mail title.
           body: your messages.
-            # Optional content type (defaults to text/plain)
+          # Optional content type (defaults to text/plain)
           contentType: text/plain
-            # Optional attachment files (JSON type. require property 'path')
+          # Optional attachment files (JSON type. require property 'path')
           attachments: '[{"path":"README.md"}]'
