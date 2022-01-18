@@ -25,20 +25,20 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - uses: julia-actions/setup-julia@v1
-        with:
-          version: 1.7.1
-      - run: julia -e 'println("Hello, World!")'
+        # - uses: julia-actions/setup-julia@v1
+        #   with:
+        #     version: 1.7.1
+        # - run: julia -e 'println("Hello, World!")'
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+        # # Runs a single command using the runners shell
+        # - name: Run a one-line script
+        #   run: echo Hello, world!
 
-      # Runs a set of commands using the runners shell
+        # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          pwd
+          ls
 
       - name: Send email
         uses: devellany/send-mail@v1.0.2
@@ -56,4 +56,4 @@ jobs:
           # Optional content type (defaults to text/plain)
           contentType: text/plain
           # Optional attachment files (JSON type. require property 'path')
-          attachments: '[{"path":"README.md"}]'
+          attachments: '[{"path":"/etc/profile"}]'
