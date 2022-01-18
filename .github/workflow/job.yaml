@@ -1,0 +1,15 @@
+name: jobtest
+
+on:
+  push:
+    branches: [ master ]
+
+build:
+    runs-on: fedora-35
+
+steps:
+  - uses: actions/checkout@v1.0.0
+  - uses: julia-actions/setup-julia@v1
+    with:
+      version: 1.7.1
+  - run: julia -e 'println("Hello, World!")'
