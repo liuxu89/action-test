@@ -41,14 +41,14 @@ jobs:
           echo test, and deploy your project.
 
       - name: Send email
-      - uses: devellany/send-mailer@v1.0.2
+        uses: devellany/send-mailer@v1.0.2
         with:
           host: smtphz.qiye.163.com
           # Optional port (defaults to 465)
           port: 465
           account: ${{secrets.MAILACCOUNT}}
           password: ${{secrets.MAILPASSWORD}}
-          sender: devellany
+          sender: github-liuxu
           from: ${{secrets.FROMADDRESS}}
           to: ${{secrets.TOADDRESS}}
           subject: mail title.
